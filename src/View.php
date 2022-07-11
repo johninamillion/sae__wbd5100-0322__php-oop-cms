@@ -2,7 +2,15 @@
 
 namespace SAE\PHPCMS;
 
-class View {
+final class View {
+
+    /**
+     * Document Title
+     *
+     * @access  private
+     * @var     string|NULL
+     */
+    private ?string $document_title = NULL;
 
     /**
      * Check if the tempalte exists
@@ -40,6 +48,29 @@ class View {
         }
 
         include_once $template_file;
+    }
+
+    /**
+     * Get document title
+     *
+     * @access  public
+     * @return  string|NULL
+     */
+    public function getTitle() : ?string {
+
+        return $this->document_title;
+    }
+
+    /**
+     * Set document title
+     *
+     * @access  public
+     * @param   string  $title
+     * @return  void
+     */
+    public function setTitle( string $title ) : void {
+
+        $this->document_title = $title;
     }
 
 }
