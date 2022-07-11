@@ -1,5 +1,7 @@
 <?php
 
+namespace SAE\PHPCMS;
+
 // Enable error reporting in Browser
 error_reporting( E_ALL );
 ini_set( 'display_errors', '1' );
@@ -7,7 +9,7 @@ ini_set( 'display_errors', '1' );
 /**
  * Load autoload file
  *
- * @return void
+ * @return  void
  */
 function load_autoloader() : void {
     /** @var string $autoload_file */
@@ -29,7 +31,7 @@ function load_autoloader() : void {
 /**
  * Load configuration file
  *
- * @return void
+ * @return  void
  */
 function load_config() : void {
     /** @var string $config_file */
