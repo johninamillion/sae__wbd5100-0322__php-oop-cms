@@ -16,7 +16,7 @@ final class Error extends Controller {
     public function index( ?int $code = 404 ): void {
         $this->setResponseCode( $code );
 
-        $this->View->setTitle( sprtinf( _( 'Error %s' ), $code ) );
+        $this->View->setTitle( sprintf( _( 'Error %s' ), $code ) );
         $this->View->getTemplatePart( 'header' );
         $this->View->getTemplatePart( 'error/404' );
         $this->View->getTemplatePart( 'footer' );
