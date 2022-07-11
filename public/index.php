@@ -50,5 +50,17 @@ function load_config() : void {
     require_once $config_file;
 }
 
+/**
+ * Run application
+ *
+ * Create an anonym instance of application and call run.
+ *
+ * @return  void
+ */
+function run_application() : void {
+    ( new Application() )->run();
+}
+
 load_autoloader();
 load_config();
+run_application();
