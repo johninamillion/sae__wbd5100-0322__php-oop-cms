@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WBD5100 0322</title>
+        <title><?= $this->getTitle() ?></title>
         <!-- Embed Meta Tags -->
         <!-- Embed Stylesheets -->
     </head>
