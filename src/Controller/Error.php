@@ -10,11 +10,11 @@ final class Error extends Controller {
      * Index
      *
      * @access  public
-     * @param   int|NULL    $status
+     * @param   int|NULL    $code
      * @return  void
      */
-    public function index( ?int $status = 404 ): void {
-        http_response_code( $status );
+    public function index( ?int $code = 404 ): void {
+        $this->setResponseCode( $code );
 
         $this->View->getTemplatePart( 'header' );
         $this->View->getTemplatePart( 'error/404' );
