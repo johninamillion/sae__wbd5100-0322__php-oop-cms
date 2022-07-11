@@ -1,0 +1,15 @@
+{
+    "name": "sae/phpcms",
+    "authors": [
+        {
+            "name": "johninamillion",
+            "email": "johninamio@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SAE\\PHPCMS\\": "src/"
+        }
+    },
+    "require": {}
+}
