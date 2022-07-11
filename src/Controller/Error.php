@@ -15,7 +15,7 @@ final class Error extends Controller {
      */
     public function index( ?int $status = 404 ): void {
         http_response_code( $status );
-        echo "Error->index( $status )";
+        $this->View->getTemplatePart( 'error/404' );
     }
 
 }
