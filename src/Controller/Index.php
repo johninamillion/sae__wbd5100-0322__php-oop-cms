@@ -2,7 +2,9 @@
 
 namespace SAE\PHPCMS\Controller;
 
-final class Index {
+use SAE\PHPCMS\Controller;
+
+final class Index extends Controller {
 
     public function index() : void {
         echo "Index->index()";

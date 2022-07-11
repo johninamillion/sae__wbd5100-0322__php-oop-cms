@@ -2,7 +2,9 @@
 
 namespace SAE\PHPCMS\Controller;
 
-final class User {
+use SAE\PHPCMS\Controller;
+
+final class User extends Controller {
 
     public function index() : void {
         echo "User->index()";
