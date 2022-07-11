@@ -15,7 +15,10 @@ final class Error extends Controller {
      */
     public function index( ?int $status = 404 ): void {
         http_response_code( $status );
+
+        $this->View->getTemplatePart( 'header' );
         $this->View->getTemplatePart( 'error/404' );
+        $this->View->getTemplatePart( 'footer' );
     }
 
 }
