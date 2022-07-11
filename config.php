@@ -6,6 +6,7 @@
 
 define( 'APP_ROOT_DIR',     __DIR__ );
 define( 'APP_PUBLIC_DIR',   __DIR__ . DIRECTORY_SEPARATOR . 'public' );
+define( 'APP_TEMPLATE_DIR', __DIR__ . DIRECTORY_SEPARATOR . 'templates' );
 
 define( 'DATABASE_TYPE',    'mysql' );
 define( 'DATABASE_HOST',    'localhost' );
