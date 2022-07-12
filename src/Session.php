@@ -54,4 +54,17 @@ abstract class Session {
         session_start();
     }
 
+    /**
+     * Unset key and value
+     *
+     * @access  public
+     * @static
+     * @param   string  $key
+     * @return  void
+     */
+    public static function unset( string $key ) : void {
+
+        unset( $_SESSION[ $key ] );
+    }
+
 }
