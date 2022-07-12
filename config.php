@@ -15,3 +15,5 @@ define( 'DATABASE_PORT',    '3306' );
 define( 'DATABASE_NAME',    'sae_5100_0322_cms' );
 define( 'DATABASE_USER',    'root' );
 define( 'DATABASE_PASS',    'root' );
+
+define( 'SESSION_TIMEOUT',  180 );
