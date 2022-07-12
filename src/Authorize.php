@@ -24,6 +24,11 @@ abstract class Authorize {
      * @return  void
      */
     public static function loginTimeout() : void {
+        if ( !Session::isset( 'login' ) ) {
+
+            return;
+        }
+
         /** @var array $login */
         $login = Session::get( 'login' );
         /** @var int $now */
