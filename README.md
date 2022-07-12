@@ -1,5 +1,7 @@
 # PHP OOP Content-Management System
 
+**Table of Contents**
+
 * [Installation](#installation)
   * [Create Autoloader](#create-autoloader)
   * [Create Assets](#create-assets)
@@ -16,7 +18,7 @@
 
 ### Create Autoloader
 
-Requires composer.
+*Requires composer.*
 
 ```shell
 $ composer update
@@ -24,7 +26,7 @@ $ composer update
 
 ### Create Assets
 
-Requires npm.
+*Requires npm.*
 
 ```shell
 $ npm update
