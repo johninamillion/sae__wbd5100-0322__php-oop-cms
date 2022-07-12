@@ -8,9 +8,15 @@
 
 namespace SAE\PHPCMS;
 
-// Enable error reporting in Browser
-error_reporting( E_ALL );
-ini_set( 'display_errors', '1' );
+/**
+ * Enable error reporting
+ *
+ * @return  void
+ */
+function enable_error_reporting() : void {
+    error_reporting( E_ALL );
+    ini_set( 'display_errors', '1' );
+}
 
 /**
  * Load autoload file
@@ -67,6 +73,7 @@ function run_application() : void {
     ( new Application() )->run();
 }
 
+enable_error_reporting();
 load_autoloader();
 load_config();
 run_application();
