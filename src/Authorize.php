@@ -2,6 +2,15 @@
 
 namespace SAE\PHPCMS;
 
+/**
+ * Authorize
+ *
+ * Authorize is an abstract class to authorize the user login and handle the session timeout.
+ * This class could be used to handle user privileges (read, write, ...) and roles (admin, subscriber, ...).
+ * This class should be used statically and should not be initialized.
+ *
+ * @abstract
+ */
 abstract class Authorize {
 
     /**
