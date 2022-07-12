@@ -39,18 +39,6 @@ final class View {
     private ?string $document_title = NULL;
 
     /**
-     * Check if the template exists
-     *
-     * @access  private
-     * @param   string  $template_part
-     * @return  bool
-     */
-    private function templateExists( string $template_part ) : bool {
-
-        return file_exists( $template_part );
-    }
-
-    /**
      * Get template part
      *
      * @access  public
@@ -97,6 +85,18 @@ final class View {
     public function setTitle( string $title ) : void {
 
         $this->document_title = $title;
+    }
+
+    /**
+     * Check if the template exists
+     *
+     * @access  public
+     * @param   string  $template_part
+     * @return  bool
+     */
+    public function templateExists( string $template_part ) : bool {
+
+        return file_exists( $template_part );
     }
 
 }
