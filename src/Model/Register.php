@@ -144,6 +144,8 @@ final class Register extends Model {
             $Statement->bindValue( 'salt', $salt );
             $Statement->execute();
 
+            // TODO: Send mail to activate account
+
             return $Statement->rowCount() > 0;
         }
 
