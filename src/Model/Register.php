@@ -105,10 +105,10 @@ final class Register extends Model {
         }
         // Check if the password is not the same as the password repeated
         if ( $password !== $password_repeat ) {
-            $this->addError( 'password', _( 'The password doesn\'t match the repeated password' ) );
+            $this->addError( 'password_repeat', _( 'The password doesn\'t match the repeated password' ) );
         }
 
-        return !$this->hasErrors( 'password' );
+        return !$this->hasErrors( 'password' ) && !$this->hasErrors( 'password_repeat' );
     }
 
     /**
