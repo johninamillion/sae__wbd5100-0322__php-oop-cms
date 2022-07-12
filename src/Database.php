@@ -2,6 +2,14 @@
 
 namespace SAE\PHPCMS;
 
+/**
+ * Database
+ *
+ * This class should be used for all database operations and is initialized in the Model class.
+ * This class inherits from the default PDO class and passed all values from the configuration file to the parents constructor.
+ *
+ * @final
+ */
 final class Database extends \PDO {
 
     /**
