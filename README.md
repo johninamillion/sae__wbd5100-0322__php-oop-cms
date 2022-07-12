@@ -1,6 +1,10 @@
 # PHP OOP Content-Management System
 
 * [Installation](#installation)
+  * [Create Autoloader](#create-autoloader)
+  * [Create Assets](#create-assets)
+  * [Setup Document Root](#setup-document-root)
+  * [Setup Database](#setup-database)
 * [Explanation](#explanation)
   * [Class](#class)
   * [Abstract (Keyword)](#abstract-keyword)
@@ -21,8 +25,14 @@ $ npm update
 $ npm run build
 ```
 
-### Document Root
+### Setup Document Root
 `/public`
+
+### Setup Database
+
+Create a new database with the help of phpmyadmin and import all tables stored in the **sql** folder.
+
+Edit the **config.php** and fill in your database credentials.
 
 ## Explanation
 
