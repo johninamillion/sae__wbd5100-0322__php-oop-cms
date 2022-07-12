@@ -14,6 +14,9 @@ namespace SAE\PHPCMS;
 /**
  * Enable error reporting
  *
+ * Enabling error reporting in the browser.
+ * Error reporting should not be enabled if you release your application on a webserver.
+ *
  * @return  void
  */
 function enable_error_reporting() : void {
@@ -23,6 +26,9 @@ function enable_error_reporting() : void {
 
 /**
  * Load autoload file
+ *
+ * Load the autoload file from the vendor folder created by composer.
+ * Triggers an error if the file doesn't exist.
  *
  * @return  void
  */
@@ -45,6 +51,9 @@ function load_autoloader() : void {
 
 /**
  * Load configuration file
+ *
+ * Load the configuration file from the root directory of this project.
+ * Triggers an error if the file doesn't exist.
  *
  * @return  void
  */
