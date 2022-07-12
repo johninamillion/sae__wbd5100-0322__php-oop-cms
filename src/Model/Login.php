@@ -17,12 +17,27 @@ final class Login extends Model {
      * @return  string
      */
     private function createPassword() : string {
-        /** @var int $time */
-        $time = time();
-        /** @var int $rand */
-        $rand = rand( 1, 99999 );
+        /** @var array $digits */
+        $digits = array_flip( range( '0', '9' ) );
+        /** @var array $lowercase */
+        $lowercase = array_flip( range( 'a', 'z' ) );
+        /** @var array $uppercase */
+        $uppercase = array_flip( range( 'A', 'Z' ) );
+        /** @var array $special */
+        $special = array_flip( str_split( '!?#*(){}[]' ) );
+        /** @var array $combined */
+        $combined = array_merge( $digits, $lowercase, $uppercase, $special );
 
-        return md5( "a{$time}-{$rand}Z" );
+        /** @var string $password */
+        $password = str_shuffle(
+            implode ( array_rand( $digits, 3 ) ).
+            implode ( array_rand( $lowercase, 3 ) ) .
+            implode ( array_rand( $uppercase, 3 ) ) .
+            implode ( array_rand( $special, 2 ) ) .
+            implode ( array_rand( $combined, 2 ) )
+        );
+
+        return $password;
     }
 
     /**
