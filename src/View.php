@@ -13,7 +13,7 @@ final class View {
     private ?string $document_title = NULL;
 
     /**
-     * Check if the tempalte exists
+     * Check if the template exists
      *
      * @access  private
      * @param   string  $template_part
