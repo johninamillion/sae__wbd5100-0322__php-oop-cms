@@ -55,9 +55,9 @@ final class View {
      *
      * @access  public
      * @param   string  $template_part
-     * @return  void
+     * @return  bool
      */
-    public function getTemplatePart( string $template_part ) : void {
+    public function getTemplatePart( string $template_part ) : bool {
         /** @var string $template_file */
         $template_file = APP_TEMPLATE_DIR . DIRECTORY_SEPARATOR . "{$template_part}.php";
 
@@ -70,10 +70,12 @@ final class View {
                 E_USER_WARNING
             );
 
-            return;
+            return FALSE;
         }
 
         include_once $template_file;
+
+        return TRUE;
     }
 
     /**
