@@ -2,6 +2,12 @@
 
 /*
  * Configuration File
+ *
+ * This file is used to define variables for application paths, database connection, session timeout and similar.
+ * Write down all values that should be configurable by the owner of the application here.
+ *
+ * Attention:
+ * Do not release any login data for the database connection publicly on GitHub or similar.
  */
 
 define( 'APP_ROOT_DIR',     __DIR__ );

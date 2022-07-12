@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Index File
+ *
+ * This is the entry point for the application.
+ */
+
 namespace SAE\PHPCMS;
 
 // Enable error reporting in Browser
