@@ -2,7 +2,25 @@
 
 namespace SAE\PHPCMS;
 
+use SAE\PHPCMS\View\Messages;
+
 final class View {
+
+    /**
+     * Messages
+     *
+     * @access  public
+     * @var     Messages|NULL
+     */
+    public ?Messages $Messages = NULL;
+
+    /**
+     * @access  public
+     * @constructor
+     */
+    public function __construct() {
+        $this->Messages = new Messages();
+    }
 
     /**
      * Document Title
