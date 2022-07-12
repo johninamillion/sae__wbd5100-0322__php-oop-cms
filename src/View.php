@@ -4,6 +4,14 @@ namespace SAE\PHPCMS;
 
 use SAE\PHPCMS\View\Messages;
 
+/**
+ * View
+ *
+ * View is a class initialized in the controller and should be used there to build the view with templates.
+ * This class is final and should not be used as a parent class
+ *
+ * @final
+ */
 final class View {
 
     /**
