@@ -75,5 +75,4 @@ abstract class Model {
         return isset( $this->errors[ $key ] ) && count( $this->errors[ $key ] ) > 0;
     }
 
-
 }
