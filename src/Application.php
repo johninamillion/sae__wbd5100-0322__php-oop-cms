@@ -6,6 +6,7 @@ namespace SAE\PHPCMS;
  * Application
  *
  * This class is the main object of this application and is initialized anonym in the index.php.
+ * This class is final and should not be used as a parent class.
  *
  * @final
  */
