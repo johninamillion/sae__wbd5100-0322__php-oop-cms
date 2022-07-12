@@ -23,5 +23,6 @@
     </div>
     <div class="form__row">
         <input class="form__submit" type="submit" value="<?= _( 'Register' ) ?>">
+        <a class="form__link" href="/login"><?= _( 'Login' ) ?></a>
     </div>
 </form>
