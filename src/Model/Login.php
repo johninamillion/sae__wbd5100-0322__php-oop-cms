@@ -53,6 +53,8 @@ final class Login extends Model {
             }
         }
 
+        $this->addError( 'username', _( 'Combination of username and password is incorrect' ) );
+
         return FALSE;
     }
 
