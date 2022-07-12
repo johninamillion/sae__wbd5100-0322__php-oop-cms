@@ -46,6 +46,8 @@ final class Register extends Controller {
             if ( $this->Model->register( $username, $email, $password, $password_repeat ) ) {
                 $this->redirect( '/login' );
             }
+
+            $this->View->Messages->setErrors( $this->Model->getErrors() );
         }
 
         $this->View->setTitle( _( 'Registration' ) );
