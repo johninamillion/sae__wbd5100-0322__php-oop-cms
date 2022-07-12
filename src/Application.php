@@ -134,9 +134,6 @@ final class Application {
      * @constructor
      */
     public function __construct() {
-        // start session
-        Session::start();
-        Authorize::loginTimeout();
         // parse url
         $this->url = $this->parseUrl();
     }
@@ -148,6 +145,11 @@ final class Application {
      * @return  void
      */
     public function run() : void {
+        // start session
+        Session::start();
+        // handle session timeout
+        Authorize::loginTimeout();
+
         /** @var string $controller */
         $controller = $this->url[ 'controller' ];
         /** @var string $method */
