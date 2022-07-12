@@ -1,6 +1,8 @@
 {
   "name": "sae_wbd5100_0322_php_oop_cms",
-  "scripts": {},
+  "scripts": {
+    "build": "gulp build"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
