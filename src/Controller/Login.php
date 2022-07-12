@@ -52,4 +52,21 @@ final class Login extends Controller {
         $this->View->getTemplatePart( 'footer' );
     }
 
+    /**
+     * Forgot
+     *
+     * @access  public
+     * @return  void
+     */
+    public function forgot() : void {
+        if ( $this->isMethod( self::METHOD_POST ) ) {
+            // nothing here now
+        }
+
+        $this->View->setTitle( _( 'Forgot Login' ) );
+        $this->View->getTemplatePart( 'header' );
+        $this->View->getTemplatePart( 'login/forgot' );
+        $this->View->getTemplatePart( 'footer' );
+    }
+
 }
