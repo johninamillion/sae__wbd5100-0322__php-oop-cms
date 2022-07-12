@@ -12,10 +12,12 @@
     }
 
     function watchSCSS() {
-        gulp.watch( './public/assets/src/scss/**/*.scss', gulp.series( 'compileSCSS' ) );
+        gulp.watch( './public/assets/src/scss/**/*.scss', gulp.series( compileSCSS ) );
     }
 
     exports.compileSCSS = compileSCSS;
     exports.watchSCSS = watchSCSS;
+
+    exports.build = gulp.series( compileSCSS );
 
 })();
