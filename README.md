@@ -15,11 +15,17 @@
 ## Installation
 
 ### Create Autoloader
+
+Requires composer.
+
 ```shell
 $ composer update
 ```
 
 ### Create Assets
+
+Requires npm.
+
 ```shell
 $ npm update
 $ npm run build
@@ -30,7 +36,7 @@ $ npm run build
 
 ### Setup Database
 
-Create a new database with the help of phpmyadmin and import all tables stored in the **sql** folder.
+Create a new database with the help of phpmyadmin and import all tables stored in the `/sql` folder.
 
 Edit the **config.php** and fill in your database credentials.
 
