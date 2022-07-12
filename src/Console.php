@@ -5,7 +5,7 @@ namespace SAE\PHPCMS;
 /**
  * Console
  *
- * Console log is an abstract class with static functions to create output to the web console.
+ * Console is an abstract class with static functions to create output to the web console.
  * This class should be used statically and should not be initialized.
  *
  * @abstract
