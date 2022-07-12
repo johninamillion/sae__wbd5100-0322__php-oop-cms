@@ -135,7 +135,7 @@ final class Application {
      */
     public function __construct() {
         // start session
-        session_start();
+        Session::start();
         // parse url
         $this->url = $this->parseUrl();
     }
