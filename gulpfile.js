@@ -4,12 +4,17 @@
 
     const gulp          = require( 'gulp' );
     const sass          = require( 'gulp-sass' )( require( 'sass' ) );
-    const autoprefixer  = require( 'gulp-autoprefixer' );
+    const autoprefix    = require( 'gulp-autoprefixer' );
+    const minify        = require( 'gulp-clean-css' );
+    const rename        = require( 'gulp-rename' );
 
     function compileSCSS() {
         return gulp.src( './public/assets/src/scss/**/*.scss' )
             .pipe( sass().on( 'error', sass.logError ) )
-            .pipe( autoprefixer() )
+            .pipe( autoprefix() )
+            .pipe( gulp.dest( './public/assets/dist/css' ) )
+            .pipe( minify() )
+            .pipe( rename( { suffix: '.min' } ) )
             .pipe( gulp.dest( './public/assets/dist/css' ) );
     }
 
