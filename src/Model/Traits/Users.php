@@ -5,6 +5,39 @@ namespace SAE\PHPCMS\Model\Traits;
 trait Users {
 
     /**
+     * Create salt
+     *
+     * @access  private
+     * @return  string
+     */
+    private function createSalt() : string {
+        /** @var int $time */
+        $time = time();
+        /** @var int $rand */
+        $rand = rand( 1, 99999 );
+
+        return hash( 'sha512', "{$time}{$rand}" );
+    }
+
+    /**
+     * Check if email exists
+     *
+     * @access  private
+     * @param   string|NULL $email
+     * @return  bool
+     */
+    private function emailExists( ?string $email ) : bool {
+        /** @var string $query */
+        $query = 'SELECT email FROM users WHERE email = :email;';
+        /** @var \PDOStatement $Statement */
+        $Statement = $this->Database->prepare( $query );
+        $Statement->bindValue( ':email', $email );
+        $Statement->execute();
+
+        return $Statement->rowCount() > 0;
+    }
+
+    /**
      * Hash password
      *
      * @access  private
