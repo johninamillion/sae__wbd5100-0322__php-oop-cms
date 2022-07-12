@@ -21,7 +21,7 @@ final class Messages {
      */
     public function getErrors( ?string $key = NULL ) : array {
 
-        return !is_null( $key ) ? $this->errors[ $key ] : $this->errors;
+        return !is_null( $key ) ? $this->errors[ $key ] ?? [] : $this->errors;
     }
 
     /**
@@ -33,7 +33,7 @@ final class Messages {
      */
     public function hasErrors( ?string $key = NULL ) : bool {
 
-        return !is_null( $key ) ? count( $this->errors[ $key ] ) > 0 : count( $this->errors ) > 0;
+        return !is_null( $key ) ? count( $this->errors[ $key ] ?? [] ) > 0 : count( $this->errors ) > 0;
     }
 
     /**
