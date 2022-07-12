@@ -25,6 +25,17 @@ abstract class Controller {
     protected ?View $View = NULL;
 
     /**
+     * Get Response Code
+     *
+     * @access  protected
+     * @return  int|bool
+     */
+    protected function getResponseCode() : int|bool {
+
+        return http_response_code();
+    }
+
+    /**
      * Is Method
      *
      * Check if the request method equals the method passed as argument.
@@ -37,7 +48,6 @@ abstract class Controller {
 
         return $_SERVER[ 'REQUEST_METHOD' ] === $method;
     }
-
     /**
      * Redirect
      *
