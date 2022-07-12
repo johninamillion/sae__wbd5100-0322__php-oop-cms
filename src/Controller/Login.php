@@ -60,7 +60,14 @@ final class Login extends Controller {
      */
     public function forgot() : void {
         if ( $this->isMethod( self::METHOD_POST ) ) {
-            // nothing here now
+            /** @var string|NULL $email */
+            $email = filter_input( INPUT_POST, 'email' );
+
+            if ( $this->Model->reset( $email ) ) {
+                $this->redirect( '/login' );
+            }
+
+            $this->View->Messages->setErrors( $this->Model->getErrors() );
         }
 
         $this->View->setTitle( _( 'Forgot Login' ) );
