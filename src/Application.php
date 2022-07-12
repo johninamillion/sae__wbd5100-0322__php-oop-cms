@@ -136,6 +136,7 @@ final class Application {
     public function __construct() {
         // start session
         Session::start();
+        Authorize::loginTimeout();
         // parse url
         $this->url = $this->parseUrl();
     }
