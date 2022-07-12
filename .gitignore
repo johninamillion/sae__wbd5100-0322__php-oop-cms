@@ -3,7 +3,7 @@
 *.iml
 
 # Build
-/public/assets/dist/*
+/public/assets/dist
 
 # Composer
 /vendor
