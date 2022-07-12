@@ -4,6 +4,9 @@ namespace SAE\PHPCMS;
 
 abstract class Controller {
 
+    const METHOD_GET = 'GET';
+    const METHOD_POST = 'POST';
+
     /**
      * View
      *
@@ -11,6 +14,25 @@ abstract class Controller {
      * @var     View|NULL
      */
     protected ?View $View = NULL;
+
+    /**
+     * @access  protected
+     * @param   string  $method
+     * @return  bool
+     */
+    protected function isMethod( string $method ) : bool {
+
+        return $_SERVER[ 'REQUEST_METHOD' ] === $method;
+    }
+
+    /**
+     * @access  protected
+     * @param   string  $location
+     * @return  void
+     */
+    protected function redirect( string $location ) : void {
+        header( "Location: {$location}" );
+    }
 
     /**
      * @access  protected
