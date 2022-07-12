@@ -42,6 +42,8 @@ final class Login extends Controller {
             if ( $this->Model->login( $username, $password ) ) {
                 $this->redirect( '/' );
             }
+
+            $this->View->Messages->setErrors( $this->Model->getErrors() );
         }
 
         $this->View->setTitle( _( 'Login' ) );
