@@ -25,7 +25,9 @@ final class Database extends \PDO {
         /** @var string $pass */
         $pass = DATABASE_PASS;
         /** @var array $options */
-        $options = [];
+        $options = [
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
+        ];
 
         parent::__construct( $dsn, $user, $pass, $options );
     }
