@@ -2,6 +2,14 @@
 
 namespace SAE\PHPCMS;
 
+/**
+ * Session
+ *
+ * Session is an abstract class with static functions to work in a readable way with the superglobale $_SERVER.
+ * This class should be used statically and should not be initialized.
+ *
+ * @abstract
+ */
 abstract class Session {
 
     /**
