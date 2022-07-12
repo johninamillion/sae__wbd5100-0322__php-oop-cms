@@ -2,6 +2,13 @@
 
 namespace SAE\PHPCMS;
 
+/**
+ * Application
+ *
+ * This class is the main object of this application and is initialized anonym in the index.php.
+ *
+ * @final
+ */
 final class Application {
 
     const DEFAULT_CONTROLLER    = 'Index';
